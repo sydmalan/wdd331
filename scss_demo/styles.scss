@@ -1,0 +1,50 @@
+/* CSS comment */ 
+// SCSS comment
+
+//YOU HAVE TO ALWAYS COMPILE YOUR SCSS 
+
+// the map file helps match up the line locations when inspecting on a browser 
+// so if it's line 11 on scss but line 2 on css - the map file will tell you the correct line for scss when inspecting 
+
+
+//colors
+$body-background-color: darkred;
+$form-background-color: white;
+$input-color: white;
+$headlines-color : white;
+    
+:root{
+    --body-color: #{$body-background-color}; //this is interpolation 
+}
+
+body{
+    // background-color: $body-background-color;
+    background-color: var(--body-color, red); //this is a custom property, red is set as the default if root dones't work 
+    color: white
+}
+
+//When we use nesting, by default it concats the parent and child element with a space 
+//But on CSS - Psuedo Classes and Psuedo Elements cannot hav any spaces, so we use an &
+//Try to limit your nesting to about 2 levels 
+
+#contactform {
+    background-color: $form-background-color;
+    input, textarea {
+        background-color: $input-color;
+        flex: 2;
+        &:focus{
+            background-color: purple;
+        }
+
+    }
+}  
+
+//Nesting with BEM (used with classes not IDS)
+// .register-form{
+//     background-color: $form-background-color;
+//     &__input{
+//         &--invalid{
+
+//         }
+//     }
+// }

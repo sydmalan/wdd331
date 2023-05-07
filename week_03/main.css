@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+/* The font for the headlines is Lora and can be found on Google fonts.
+The font list for the body copy is: Helvetica, Arial, sans-serif, and the color should be #333.
+You can use #d0d0d0 for the light grey color of the lines.
+Navigation links should behave thus: normal and visited: #666 and no underline , active: #DEB887, hover: #00ddff
+The exception would be the title of the site. It should be a link, but should not have a hover change and should remain the same color of the rest of the text (#333)
+You should be able to do this without modifying the html. Have that as your goal. If you do end up changing the .html file make sure to submit it with your css! */
+/* MOBILE */
+body {
+  width: 95%;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 4.8em;
+  font-weight: 500;
+  text-align: center;
+}
+h1 a:link {
+  font-family: "Lora", serif;
+  text-decoration: none;
+  color: #333;
+}
+h1 a:visited {
+  color: #333;
+}
+
+ul {
+  list-style-type: none;
+  font-family: "Lora", serif;
+  font-size: 1.3em;
+  /* margin: 0 auto; */
+  border-top: 1px solid #d0d0d0;
+  border-bottom: 1px solid #d0d0d0;
+  padding: 0px;
+}
+
+li {
+  padding: 10px;
+  text-transform: uppercase;
+  text-align: center;
+  /* margin: 0 auto; */
+}
+li a:link {
+  color: #666;
+  text-decoration: none;
+}
+li a:visited {
+  color: #666;
+}
+li a:hover {
+  color: #00ddff;
+}
+li a:active {
+  color: #DEB887;
+}
+
+.post-date {
+  /* border-top: 1px solid #d0d0d0; */
+  border-bottom: 1px solid #d0d0d0;
+  font-size: 1.8em;
+  color: #333;
+  text-align: right;
+  text-transform: uppercase;
+  padding-top: 40px;
+  padding-bottom: 10px;
+  padding-right: 15px;
+}
+
+h2 {
+  font-weight: 400;
+  /* padding: 0 15px; */
+  padding-left: 15px;
+  margin-top: 30px;
+  font-size: 1.8em;
+  /* width: 100%; */
+}
+h2 a:link {
+  font-family: "Lora", serif;
+  text-decoration: none;
+  color: #666;
+}
+h2 a:visited {
+  color: #666;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+}
+
+p {
+  padding-top: 20px;
+  font-family: Helvetica, Arial, sans-serif;
+  margin: 0 auto;
+  padding: 10px 15px 20px 15px;
+  font-size: 1.2em;
+  color: #333;
+}
+p a {
+  color: #666;
+  text-decoration: none;
+}
+
+/* DESKTOP */
+@media only screen and (min-width: 700px) {
+  h1 {
+    font-size: 8em;
+  }
+  ul {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 2em;
+    gap: 20px;
+    /* padding: 20px 0px; */
+  }
+  article {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+  }
+  .post-date {
+    grid-column: 1/2;
+    font-size: 3em;
+    border-right: 1px solid #d0d0d0;
+    border-bottom: none;
+    padding-right: 20px;
+  }
+  /* h2, img, p{
+      grid-column: 2/3;
+      padding-top: 30px;
+  } */
+  .post-content {
+    grid-column: 2/3;
+    /* padding-top: 30px; */
+    border-bottom: 1px solid #d0d0d0;
+  }
+  img {
+    max-width: 40%;
+  }
+  h2 {
+    font-size: 3em;
+    padding-top: 7px;
+    padding-left: 20px;
+  }
+  p {
+    font-size: 2em;
+    padding-bottom: 50px;
+    width: 95%;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
