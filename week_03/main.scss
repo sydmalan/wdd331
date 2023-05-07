@@ -9,6 +9,16 @@ You should be able to do this without modifying the html. Have that as your goal
 
 /* MOBILE */
 
+//colors
+$font-dark-color:#333;
+$font-light-color: #666;
+
+//font
+$font-lora: "Lora", serif;
+
+//border
+$border-line-gray: 1px solid #d0d0d0;
+
 @mixin image-size{
     display: block;
     margin: 0 auto;
@@ -17,20 +27,14 @@ You should be able to do this without modifying the html. Have that as your goal
 
 @mixin nav-ul{
     list-style-type: none;
-    font-family: "Lora", serif;
+    font-family: $font-lora;
     font-size: 1.3em;
     /* margin: 0 auto; */
-    border-top: 1px solid #d0d0d0;
-    border-bottom: 1px solid #d0d0d0;
+    border-top: $border-line-gray;
+    border-bottom: $border-line-gray;
     padding: 0px;
 }
 
-//colors
-$font-dark-color:#333;
-$font-light-color: #666;
-
-//font
-$font-lora: "Lora", serif;
 
 body{
     width: 95%;
@@ -51,7 +55,6 @@ h1{
         color: $font-dark-color;
     }
 }
-
 
 
 ul {
@@ -82,7 +85,7 @@ li{
 
 .post-date{
     /* border-top: 1px solid #d0d0d0; */
-    border-bottom: 1px solid #d0d0d0;
+    border-bottom: $border-line-gray;
     font-size: 1.8em;
     color: $font-dark-color;
     text-align: right;
@@ -158,7 +161,7 @@ $break-large: 700px;
     .post-date{
         grid-column: 1/2;
         font-size: 3em;
-        border-right: 1px solid #d0d0d0;
+        border-right: $border-line-gray;
         border-bottom: none;
         padding-right: 20px;
     }
@@ -171,7 +174,7 @@ $break-large: 700px;
     .post-content{
         grid-column: 2/3;
         /* padding-top: 30px; */
-        border-bottom: 1px solid #d0d0d0;
+        border-bottom: $border-line-gray;
     }
 
     img{
